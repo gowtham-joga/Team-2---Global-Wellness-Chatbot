@@ -1,5 +1,17 @@
 # Project Name: Developing Chatbot on Global Wellness  
+# Chatbot on Global Wellness
 
-This project aims to develop an AI-powered chatbot designed to promote global wellness by providing users with personalized support and guidance. The chatbot leverages artificial intelligence to assist with mental well-being, stress management, healthy lifestyle tips, and general wellness practices, making it a helpful companion for users seeking accessible and reliable support anytime, anywhere.  
+This project is a chatbot focused on promoting global wellness.
+It aims to provide information, resources, and support related
+to health, mental well-being, and lifestyle improvements.
 
-By combining conversational AI with wellness knowledge, the chatbot provides empathetic, user-friendly interactions that adapt to individual needs. The project’s goal is to make wellness resources universally available in an engaging and approachable format, bridging the gap between technology and health for people around the world.
+## Features (planned)
+- Interactive chatbot interface
+- Health tips and reminders
+- Resource links for mental wellness
+- User-friendly design
+- MultiLanguage Support
+
+## Author
+- Gowtham (23pa1a1286-maker)
+
