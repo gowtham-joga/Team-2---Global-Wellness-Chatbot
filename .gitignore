@@ -1,0 +1,16 @@
+# Ignore virtual environment
+venv/
+
+# Ignore database file
+chatbot.db
+
+# Ignore milestone-2 specific files
+demo.py
+wellness_intent_classifier.py
+
+# Ignore Hugging Face / downloaded models
+models/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
