@@ -1,0 +1,21 @@
+# Python virtual environment
+venv/
+.venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Database file (Contains user data)
+*.db
+*.sqlite3
+
+# Environment variables file (Contains secrets like email passwords)
+.env
+
+# IDE and editor folders
+.vscode/
+.idea/
+
+# NLU Model folder (Best practice is to not commit large model files)
+nlu_model/
