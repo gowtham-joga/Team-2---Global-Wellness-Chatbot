@@ -1,0 +1,19 @@
+# /WELLNESS/docker-compose.yml
+
+services:
+  backend:
+    build: .
+    container_name: backend-container
+    ports:
+      - "5000:8000"
+    volumes:
+      - ./main_database.db:/app/main_database.db
+    # 👇 THIS IS THE NEW, CRUCIAL PART
+    environment:
+      - DATABASE_URL=sqlite:////app/main_database.db
+
+  frontend:
+    build: ./frontend
+    container_name: frontend-container
+    ports:
+      - "8501:8501"
