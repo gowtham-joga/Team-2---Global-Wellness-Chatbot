@@ -8,7 +8,7 @@ from html import escape
 # Config & CSS loader
 # -------------------------
 st.set_page_config(page_title="Global Wellness Chatbot", layout="wide", page_icon="💬")
-BACKEND_URL = "http://127.0.0.1:8000"
+BACKEND_URL = "http://backend:8000"
 
 theme_base = st.get_option("theme.base")
 if theme_base not in ("light", "dark"): theme_base = "light"
