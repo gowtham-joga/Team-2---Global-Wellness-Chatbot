@@ -1,5 +1,3 @@
-# /WELLNESS/docker-compose.yml
-
 services:
   backend:
     build: .
@@ -8,7 +6,6 @@ services:
       - "5000:8000"
     volumes:
       - ./main_database.db:/app/main_database.db
-    # 👇 THIS IS THE NEW, CRUCIAL PART
     environment:
       - DATABASE_URL=sqlite:////app/main_database.db
 
