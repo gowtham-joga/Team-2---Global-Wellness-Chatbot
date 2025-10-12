@@ -10,8 +10,10 @@ SECRET_KEY = "a_very_secret_key_for_your_project"
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 60
 
+# This is the NEW, CORRECT code
 def hash_password(password: str):
-    return pwd_context.hash(password)
+    # Truncate password to 72 bytes to prevent bcrypt error
+    return pwd_context.hash(password[:72])
 
 def verify_password(plain_password, hashed_password):
     return pwd_context.verify(plain_password, hashed_password)

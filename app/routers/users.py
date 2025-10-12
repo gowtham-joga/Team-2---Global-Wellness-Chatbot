@@ -26,22 +26,35 @@ def get_admin_user(current_user: models.User = Depends(get_current_user)):
 # -----------------------------
 # Register (Unchanged)
 # -----------------------------
+# This is the NEW, CORRECT register function for your file
+
 @router.post("/register", response_model=schemas.UserResponse, status_code=status.HTTP_201_CREATED)
 def register(user: schemas.UserCreate, db: Session = Depends(database.get_db)):
     if db.query(models.User).filter(models.User.email == user.email).first():
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Email already registered")
+    
+    # 1. We removed 'is_admin=False' from here
     new_user = models.User(
         username=user.username,
         email=user.email,
-        hashed_password=utils.hash_password(user.password),
+        # 2. We added the crucial password fix here
+        hashed_password=utils.hash_password(user.password[:72]), 
         language=user.language,
-        is_admin=False
     )
     db.add(new_user)
     db.commit()
     db.refresh(new_user)
-    return new_user
 
+    # --- THIS IS THE NEW TRICK ---
+    # Check if this is the first user in the database
+    if db.query(models.User).count() == 1:
+        # If so, update them to be an admin
+        new_user.is_admin = True
+        db.commit()
+        db.refresh(new_user)
+    # ---------------------------
+
+    return new_user
 # -----------------------------
 # Login (Unchanged)
 # -----------------------------
