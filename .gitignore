@@ -18,4 +18,3 @@ __pycache__/
 .idea/
 
 # NLU Model folder (Best practice is to not commit large model files)
-nlu_model/
