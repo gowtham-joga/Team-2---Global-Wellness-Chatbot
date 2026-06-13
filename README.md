@@ -1,12 +1,12 @@
 # Global Wellness Chatbot (WellBot)
 
-## 📖 Description
+## Description
 
 **WellBot** is an AI-powered, bilingual (English/Hindi) chatbot designed to provide instant, reliable wellness and first-aid information. It features a comprehensive admin dashboard for real-time management, analytics, and continuous improvement based on user feedback. This project was developed as a final year submission.
 
 
 
-## ✨ Key Features
+## Key Features
 
 ### User Features
 * **Bilingual Chat:** Interact with the bot in either English or Hindi.
@@ -22,7 +22,7 @@
 * **Feedback Review:** A dedicated panel to review all user feedback and comments.
 * **Unanswered Questions Log:** Automatically logs questions the bot could not answer, helping to identify knowledge gaps.
 
-## 💻 Tech Stack
+## Tech Stack
 
 * **Backend:** FastAPI, SQLAlchemy, Uvicorn
 * **Frontend:** Streamlit
@@ -31,7 +31,7 @@
 * **Security:** JWT for token-based authentication, `passlib` with `bcrypt` for password hashing.
 * **Deployment:** Docker
 
-## 🚀 Setup and Installation
+## Setup and Installation
 
 Follow these steps to get the project running locally.
 
